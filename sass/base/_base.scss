@@ -1,0 +1,30 @@
+@use "../abstract" as a;
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+:root {
+  font-size: clamp(16px, calc(1rem + ((1vw - 4.2px) * 0.2667)), 20px);
+  min-height: 0vw;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  @include a.breakpoint(tablet-land) {
+    
+  }
+}
+
+::selection {
+  background-color: a.$color-primary;
+  color: a.$color-white;
+}

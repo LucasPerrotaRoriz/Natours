@@ -15,75 +15,82 @@
     <title>Natours | Exciting tours for adventurous people</title>
   </head>
   <body>
-    <!-- HEADER -->
-    <header class="header">
-      <img
-        src="public/img/logo-green-1x.png"
-        alt="Natours logo"
-        class="header__logo"
-      />
+    <!-- NAVIGATION -->
+    <div class="navigation">
+      <input type="checkbox" id="check" class="navigation__checkbox">
 
-      <div class="hamburger">
-        <div class="bar"></div>
-      </div>
+      <label for="check" class="navigation__hamburger">
+        <div class="navigation__bar"></div>
+      </label>
 
       <div class="navigation__background">&nbsp;</div>
 
-      <nav class="navigation hidden">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a href="#about" class="nav__link">01 About Natours</a>
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#about" class="navigation__link"><span>01</span> About Natours</a>
           </li>
-          <li class="nav__item">
-            <a href="#benefits" class="nav__link">02 Your Benefits</a>
+          <li class="navigation__item">
+            <a href="#benefits" class="navigation__link"><span>02</span> Your Benefits</a>
           </li>
-          <li class="nav__item">
-            <a href="#tours" class="nav__link">03 Popular Tours</a>
+          <li class="navigation__item">
+            <a href="#tours" class="navigation__link"><span>03</span> Popular Tours</a>
           </li>
-          <li class="nav__item">
-            <a href="#stories" class="nav__link">04 Stories</a>
+          <li class="navigation__item">
+            <a href="#stories" class="navigation__link"><span>04</span> Stories</a>
           </li>
-          <li class="nav__item">
-            <a href="#book" class="nav__link">05 Book Now</a>
+          <li class="navigation__item">
+            <a href="#book" class="navigation__link"><span>05</span> Book Now</a>
           </li>
         </ul>
       </nav>
+    </div>
+
+    <!-- HEADER -->
+    <header class="hero">
+      <div class="header__logo-box">
+        <img
+          src="public/img/logo-white.png"
+          alt="Natours logo"
+          class="header__logo"
+        />
+      </div>
+      <div class="header__text-box text-center">
+        <h1 class="header__primary">
+          <h1 class="header__primary--main">Outdoors</h1>
+          <h2 class="header__primary--secondary">is where life happens</h2>
+        </h1>
+        <a href="#" class="btn btn--white btn--animated">Discover our tours</a>
+      </div>
     </header>
 
-    <!-- HERO -->
-    <section class="hero">
-      <h1 class="hero__header center">
-        Outdoors <span>is where life happens</span>
-      </h1>
-      <a href="#" class="btn btn--white">Discover our tours</a>
-    </section>
-
-    <!-- ABOUT -->
     <main>
+       <!-- ABOUT -->
       <section class="section-about" id="about">
         <div class="margin-bottom-l text-center">
-          <h2 class="heading-secondary">
+          <h2 class="header-secondary">
             Exciting tours for adventurous people
           </h2>
         </div>
         <div class="about__content">
-          <h3 class="heading-tertiary">
+          <h3 class="header-tertiary">
             You're going to fall in love with nature.
           </h3>
-          <p>
+          <p class="margin-bottom-sl">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
             ipsum sapiente aspernatur libero repellat quis consequatur ducimus
             quam nisi exercitationem omnis earum qui.
           </p>
-          <h3>Live adventures like you never have before</h3>
-          <p>
+          <h3 class="header-tertiary">
+            Live adventures like you never have before
+          </h3>
+          <p class="margin-bottom-sl">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
             nulla deserunt voluptatum nam.
           </p>
           <a href="#" class="link">Learn more &rarr;</a>
         </div>
         <div>
-          <img src="public/img/nat-3-large.jpg" alt="" />
           <div class="composition">
             <img
               srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
@@ -114,11 +121,11 @@
 
       <!-- FEATURES -->
       <section class="section-features" id="features">
-        <div class="grid features">
+        <div class="features">
           <!-- FEATURE 01 -->
-          <div class="feature">
-            <i class="fa-solid fa-globe feature__icon"></i>
-            <h3 class="heading-tertiary">Explore the world</h3>
+          <div class="features__feature">
+            <i class="fa-solid fa-globe features__icon"></i>
+            <h3 class="header-tertiary">Explore the world</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
               ipsum sapiente aspernatur.
@@ -126,9 +133,9 @@
           </div>
 
           <!-- FEATURE 02 -->
-          <div class="feature">
-            <i class="fa-regular fa-compass feature__icon"></i>
-            <h3 class="heading-tertiary">Meet nature</h3>
+          <div class="features__feature">
+            <i class="fa-regular fa-compass features__icon"></i>
+            <h3 class="header-tertiary">Meet nature</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
               ipsum sapiente aspernatur.
@@ -136,9 +143,9 @@
           </div>
 
           <!-- FEATURE 03 -->
-          <div class="feature">
-            <i class="fa-regular fa-map feature__icon"></i>
-            <h3 class="heading-tertiary">Find your way</h3>
+          <div class="features__feature">
+            <i class="fa-regular fa-map features__icon"></i>
+            <h3 class="header-tertiary">Find your way</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
               ipsum sapiente aspernatur.
@@ -146,20 +153,20 @@
           </div>
 
           <!-- FEATURE 04 -->
-          <div class="feature">
-            <i class="fa-regular fa-heart feature__icon"></i>
-            <h3 class="heading-tertiary">Live a healthier life</h3>
+          <div class="features__feature">
+            <i class="fa-regular fa-heart features__icon"></i>
+            <h3 class="header-tertiary">Live a healthier life</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
               ipsum sapiente aspernatur.
             </p>
           </div>
         </div>
-      </section>      
+      </section>
 
       <section class="tours" id="tours">
         <div class="margin-bottom-l text-center">
-          <h2 class="heading-secondary">Most popular tours</h2>
+          <h2 class="header-secondary">Most popular tours</h2>
         </div>
         <div class="grid cards">
           <!-- CARD 01 -->
@@ -255,7 +262,7 @@
           </video>
         </div>
         <div class="margin-bottom-l text-center">
-          <h2 class="heading-secondary">We make people genuinely happy</h2>
+          <h2 class="header-secondary">We make people genuinely happy</h2>
         </div>
         <div class="stories">
           <div class="story">
@@ -274,7 +281,7 @@
               <figcaption class="story__author">Mary Smith</figcaption>
             </figure>
             <div class="story__text">
-              <h3 class="heading-tertiary">
+              <h3 class="header-tertiary">
                 I had the best week ever with my family
               </h3>
               <p>
@@ -308,7 +315,7 @@
               <figcaption class="story__author">Jack Wilson</figcaption>
             </figure>
             <div class="story__text">
-              <h3 class="heading-tertiary">
+              <h3 class="header-tertiary">
                 Wow! my life is completely different now.
               </h3>
               <p>
@@ -331,7 +338,7 @@
         <div class="book">
           <div class="book-form">
             <form action="" class="form">
-              <h2 class="heading-secondary">Start booking now</h2>
+              <h2 class="header-secondary">Start booking now</h2>
               <div class="form__group">
                 <input type="text" class="form__input" name="name" />
                 <label for="name" class="form__label">Full name</label>
@@ -375,9 +382,9 @@
           </div>
         </div>
       </section>
-      </main>
+    </main>
 
-      <!-- FOOTER -->
+    <!-- FOOTER -->
     <footer class="footer">
       <div class="footer__logo-box">
         <picture class="footer__logo">
@@ -429,7 +436,7 @@
       </div>
       <div class="popup__right">
         <a href="#" class="popup__close">&times;</a>
-        <h2 class="heading-secondary">Start booking now</h2>
+        <h2 class="header-secondary">Start booking now</h2>
         <h3>Important &mdash; Please read thesse terms before booking</h3>
         <div class="popup__text-box">
           <p>

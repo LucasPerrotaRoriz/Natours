@@ -1,9 +1,10 @@
 @use 'functions' as f;
 
 $breakpoints-up: (
-    "medium": f.em(600),
-    "large": f.em(900),
-    "xlarge": f.em(1200),
+    "phone": f.em(600),
+    "tablet": f.em(900),
+    "tablet-land": f.em(1200),
+    "desktop": f.em(1440),
 );
 
 @mixin breakpoint($size) {

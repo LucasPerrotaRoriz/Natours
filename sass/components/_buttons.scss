@@ -1,0 +1,84 @@
+@use "../abstract" as a;
+@use "../base/animations" as *;
+
+.btn {
+  &,
+  &:link,
+  &:visited {
+    position: relative;
+    display: inline-block;
+    font-size: a.rem(14);
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: a.rem(12.5) a.rem(30);
+    border: none;
+    border-radius: a.rem(100);
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 a.rem(10) a.rem(20) rgba(a.$color-black, 0.2);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 a.rem(5) a.rem(10) rgba(a.$color-black, 0.2);
+  }
+
+  &--white {
+    background-color: a.$color-white;
+    color: a.$color-grey-dark;
+
+    &::after {
+      background-color: a.$color-white;
+    }
+  }
+
+  &--green {
+    background-color: a.$color-primary;
+    color: a.$color-white;
+
+    &::after {
+      background-color: a.$color-primary;
+    }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: a.rem(100);
+    transition: all 0.4s;
+    z-index: -1;
+  }
+
+  &--animated {
+    animation: moveInUp 1s ease-out 0.75s 1 normal backwards;
+  }
+}
+
+.link {
+  &:link,
+  &:visited {
+    font-size: a.rem(14);
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 1px solid a.$color-primary;
+    color: a.$color-primary;
+    transition: all 0.4s;
+  }
+}

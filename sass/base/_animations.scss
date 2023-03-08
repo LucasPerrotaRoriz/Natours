@@ -1,0 +1,44 @@
+@use '../abstract/' as a;
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(a.rem(-100));
+  }
+
+  80% {
+    transform: translateX(a.rem(10));
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(a.rem(100));
+  }
+
+  80% {
+    transform: translateX(a.rem(-10));
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(a.rem(30));
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+}
