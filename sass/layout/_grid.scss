@@ -1,0 +1,28 @@
+@use '../abstract/' as a;
+
+.row {
+   max-width: a.rem(500);
+   margin: 0 auto;
+   padding: 0 a.rem(30);
+
+   @include a.breakpoint(tablet) {
+    max-width: a.rem(1140);
+    margin: 0 4rem;
+   }
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-about {
+    grid-template-columns: 1fr;
+    gap: a.rem(20);
+
+    @include a.breakpoint(tablet) {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: a.rem(60);
+    }
+
+   
+}
