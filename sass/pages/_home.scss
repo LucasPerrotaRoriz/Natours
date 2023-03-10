@@ -12,3 +12,32 @@ main {
     padding: a.rem(200) a.rem(80);
   }
 }
+
+.section-features {
+  margin-block: a.rem(200) a.rem(100);
+  padding: a.rem(200) 0rem;
+  background-image: webkit-gradient(
+    to right bottom,
+    rgba(126, 213, 111, 0.8),
+    rgba(40, 180, 133, 0.8)
+  ),
+  url("../../public/img/nat-4-xl.jpg");
+background-image: linear-gradient(
+    to right bottom,
+    rgba(126, 213, 111, 0.8),
+    rgba(40, 180, 133, 0.8)
+  ),
+  url("../../public/img/nat-4-xl.jpg");
+
+  background-size: cover;
+  transform: skewY(-7deg);
+
+  @include a.breakpoint(tablet) {
+    margin-block: a.rem(-80) a.rem(100);
+    padding: a.rem(150) 0rem;
+  }
+
+  & > * {
+    transform: skewY(7deg);
+  }
+}

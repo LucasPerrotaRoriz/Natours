@@ -1,3 +1,25 @@
 @use "../abstract/" as a;
 
+.features {
+  text-align: center;
+  padding-inline: a.rem(10);
+  background-color: rgba(a.$color-white, 0.8);
+  transition: all .4s;
 
+  &:hover {
+    transform: translateY(a.rem(-20));
+  }
+
+  &__icon {
+    display: inline-block;
+    font-size: a.rem(50);
+    margin-block-start: a.rem(10);
+    background-image: linear-gradient(
+      a.$color-primary-light,
+      a.$color-primary-dark
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
