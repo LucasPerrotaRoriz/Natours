@@ -13,16 +13,20 @@
 
 .grid {
     display: grid;
+    column-gap: a.rem(60);
+    row-gap: a.rem(60);
+
+    @include a.breakpoint(tablet) {
+        row-gap: a.rem(80);
+    }
 }
 
 .grid-about {
     grid-template-columns: 1fr;
-    gap: a.rem(20);
 
     @include a.breakpoint(tablet) {
         grid-template-columns: repeat(2, 1fr);
-        column-gap: a.rem(60);
+        column-gap: a.rem(80);
     }
-
-   
 }
+

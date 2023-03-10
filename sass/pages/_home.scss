@@ -1,6 +1,14 @@
-@use "../abstract/variables" as v;
+@use "../abstract" as a;
+
 main {
-  background-color: #f7f7f7;
+  background-color: a.$color-grey-light-1;
 }
 
+.section-about {
+  padding: a.rem(200) 0rem;
+  margin-top: -20vh;
 
+  @include a.breakpoint(desktop) {
+    padding: a.rem(200) a.rem(80);
+  }
+}

@@ -1,14 +1,46 @@
-@use '../abstract/variables' as v;
-
-.about__content {
-    
-}
+@use "../abstract" as a;
 
 .composition {
-    position: relative;
+  position: relative;
 
-    &__photo {
-        
+  &__photo {
+    position: absolute;
+    width: 55%;
+    border-radius: 2px;
+    box-shadow: 0rem a.rem(15) a.rem(40) rgba(a.$color-primary, .4);
+    transition: all .2s;
+    outline-offset: a.rem(10);
+    z-index: 10;
+
+    @include a.breakpoint(tablet) {
+      outline-offset: a.rem(20);
     }
 
+    &--p1 {
+      top: a.rem(-20);
+      left: 0;
+    }
+
+    &--p2 {
+      top: a.rem(20);
+      right: 0;
+    }
+
+    &--p3 {
+      top: a.rem(100);
+      left: 20%;
+    }
+
+    &:hover {
+      outline: a.rem(15) solid a.$color-primary;
+      box-shadow: 0 a.rem(20) a.rem(40) rgba(a.$color-black, 0.2);
+      transform: scale(1.05) translateY(a.rem(-5));
+      z-index: 20;
+    }
+  }
+
+  &:hover &__photo:not(:hover) {
+    transform: scale(.95);
 }
+}
+

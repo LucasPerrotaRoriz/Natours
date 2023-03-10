@@ -1,5 +1,5 @@
-@use '../abstract/' as a;
-@use '../base/utilities' as u;
+@use "../abstract/" as a;
+@use "../base/utilities" as u;
 
 body {
   font-family: "Lato", sans-serif;
@@ -46,6 +46,45 @@ body {
 
   @include a.breakpoint(desktop) {
     font-size: a.rem(18);
+  }
+}
+
+.header-secondary {
+  font-size: a.rem(22);
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0 2rem;
+  background-image: linear-gradient(
+    to right bottom,
+    a.$color-primary-light,
+    a.$color-primary-dark
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  @include a.breakpoint(tablet) {
+    font-size: a.rem(32);
+    margin-block-end: a.rem(70);
+  }
+
+  @include a.breakpoint(tablet-land) {
+    margin-block-end: a.rem(80);
+  }
+}
+
+.header-tertiary {
+  font-size: a.rem(14);
+  text-transform: uppercase;
+  margin-block-end: a.rem(15);
+}
+
+.paragraph {
+  font-size: a.rem(12);
+  margin-block-end: a.rem(20);
+
+  @include a.breakpoint(tablet) {
+    font-size: a.rem(14);
   }
 }
 
