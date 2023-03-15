@@ -7,7 +7,6 @@
 
    @include a.breakpoint(tablet) {
     max-width: a.rem(1140);
-    margin: 0 4rem;
    }
 }
 
@@ -15,6 +14,8 @@
     display: grid;
     column-gap: a.rem(60);
     row-gap: a.rem(60);
+    align-items: center;
+    justify-content: center;
 
     @include a.breakpoint(tablet) {
         row-gap: a.rem(80);
@@ -32,4 +33,12 @@
 
 .grid-features {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid-cards {
+    grid-template-columns: a.rem(350);
+
+    @include a.breakpoint(tablet) {
+        grid-template-columns: repeat(3, minmax(a.rem(250), a.rem(350)));
+    }
 }

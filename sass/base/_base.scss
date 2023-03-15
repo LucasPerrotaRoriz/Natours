@@ -1,5 +1,5 @@
 @use "../abstract" as a;
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 
 :root {
   font-size: clamp(16px, calc(1rem + ((1vw - 4.2px) * 0.2667)), 20px);
@@ -19,9 +19,7 @@ html {
 }
 
 body {
-  @include a.breakpoint(tablet-land) {
-    
-  }
+  font-family: 'Lato', sans-serif;
 }
 
 ::selection {

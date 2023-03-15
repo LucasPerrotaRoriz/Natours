@@ -10,11 +10,15 @@
     font-size: a.rem(14);
     text-transform: uppercase;
     text-decoration: none;
-    padding: a.rem(12.5) a.rem(30);
+    padding: a.rem(12.5) a.rem(60);
     border: none;
     border-radius: a.rem(100);
     transition: all 0.2s;
     cursor: pointer;
+
+    @include a.breakpoint(tablet) {
+     padding: a.rem(15) a.rem(40);
+    }
   }
 
   &:hover {
@@ -60,7 +64,6 @@
     display: inline-block;
     height: 100%;
     width: 100%;
-    border: none;
     border-radius: a.rem(100);
     transition: all 0.4s;
     z-index: -1;
